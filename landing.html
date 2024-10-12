@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        body {
+            background-color: #322624;
+            color: #322624;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden; /* يمنع التمرير */
+        }
+
+        .top-banner {
+            width: 100%;
+            background-color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            top: -100px;
+            opacity: 0;
+            animation: slideDown 1s forwards;
+        }
+
+        @keyframes slideDown {
+            to {
+                top: 0;
+                opacity: 1;
+            }
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 20px;
+            transition: transform 0.5s ease; /* تأثير انتقالي */
+        }
+
+        .content:hover {
+            transform: scale(1.02); /* تكبير عند التحويم */
+        }
+
+        .notice-box {
+            width: 45%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ظل للصندوق */
+            transition: transform 0.3s;
+        }
+
+        .notice-box:hover {
+            transform: translateY(-5px); /* رفع الصندوق عند التحويم */
+        }
+
+        .image-box {
+            width: 45%;
+            display: flex;
+            justify-content: center;
+            align-items: center; /* مركز الصورة عموديا */
+            transition: transform 0.5s ease; /* تأثير انتقالي */
+        }
+
+        .image-box img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s; /* تأثير الانتقال للصورة */
+        }
+
+        .image-box img:hover {
+            transform: scale(1.05); /* تكبير الصورة عند التحويم */
+        }
+
+        .bottom-text {
+            margin-top: 50px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            cursor: pointer; /* تغيير المؤشر عند المرور */
+            transition: background-color 0.3s;
+        }
+
+        .bottom-text:hover {
+            background-color: #f0f0f0; /* تغيير لون الخلفية عند التحويم */
+        }
+
+        .bottom-text a {
+            color: #322624;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- المستطيل العلوي -->
+    <div class="top-banner">
+        <h1>get it, number 0</h1>
+    </div>
+
+    <div class="content">
+        <!-- الجزء الأيسر -->
+        <div class="notice-box">
+            <h2>Notice:</h2>
+            <p>- This content is only intended for specific people</p>
+            <p>- Those who are unable to be organized and persevere</p>
+            <p>- Always distracted</p>
+            <p>This book provides you with assistance in taking your first step into the real world</p>
+            <p>- If you do not have goals and accept your failure, I will be wasting your time if you continue reading</p>
+        </div>
+
+        <!-- الجزء الأيمن مع الصورة -->
+        <div class="image-box">
+            <img src="https://imgur.com/a/ouajULz" alt="Book Image">
+        </div>
+    </div>
+
+    <!-- النص في الأسفل -->
+    <div class="bottom-text">
+        <a href="index.html">CLICK TO GET NUMBER ZERO</a>
+    </div>
+
+    <script>
+        document.querySelector(".bottom-text").addEventListener("click", function() {
+            window.location.href = "index.html"; // الانتقال إلى الصفحة الرئيسية
+        });
+    </script>
+</body>
+</html>
